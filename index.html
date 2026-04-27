@@ -227,7 +227,7 @@
             // Check if data already exists
             const hasData = localStorage.getItem('portfolioSetup');
             const dataVersion = localStorage.getItem('portfolioVersion');
-            const currentVersion = '1.7'; // Updated SRUT project images
+            const currentVersion = '1.8'; // Updated SPB project details
             
             if (!hasData || dataVersion !== currentVersion) {
                 // Setup Skills
@@ -313,11 +313,11 @@
                         ]
                     },
                     {
-                        title: 'SPB Data Converter',
-                        description: 'Tool untuk konversi data SPB (Surat Perintah Bayar)',
-                        tech: 'HTML, CSS, JavaScript',
+                        title: 'SPB to Excel Converter',
+                        description: 'Aplikasi desktop Python untuk mengotomatisasi pengolahan data SPB di PT Capella Dinamik Nusantara. Menggabungkan dan mengonversi file SPB menjadi laporan Excel terstruktur dengan batch processing, validasi data otomatis, dan formatting Excel otomatis. Menghemat waktu proses dan mengurangi human error.',
+                        tech: 'Python, Tkinter, Pandas, OpenPyXL',
                         images: [
-                            'assets/images/projects/spb-converter-1.jpg'
+                            'assets/images/projects/spb-converter-1.png'
                         ]
                     },
                     {
