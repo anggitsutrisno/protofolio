@@ -227,7 +227,7 @@
             // Check if data already exists
             const hasData = localStorage.getItem('portfolioSetup');
             const dataVersion = localStorage.getItem('portfolioVersion');
-            const currentVersion = '1.8'; // Updated SPB project details
+            const currentVersion = '1.9'; // Updated SRUT project details
             
             if (!hasData || dataVersion !== currentVersion) {
                 // Setup Skills
@@ -322,9 +322,9 @@
                         ]
                     },
                     {
-                        title: 'SRUT Excel Converter',
-                        description: 'Tool untuk konversi data SRUT ke format Excel',
-                        tech: 'Python',
+                        title: 'SRUT Excel to FSRUT Converter',
+                        description: 'Aplikasi desktop Python untuk mengotomatisasi penggabungan dan konversi data SRUT dari multiple Excel ke format khusus (.FSRUT) di PT Capella Dinamik Nusantara. Fitur: import multiple files, validasi otomatis (Nomor Chasis & SRUT), data cleaning, merge dataset, export format khusus, penamaan file otomatis. Mempercepat proses dan mengurangi kesalahan manual.',
+                        tech: 'Python, Tkinter, Pandas',
                         images: [
                             'assets/images/projects/srut-converter-1.png',
                             'assets/images/projects/srut-converter-2.png'
