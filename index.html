@@ -227,7 +227,7 @@
             // Check if data already exists
             const hasData = localStorage.getItem('portfolioSetup');
             const dataVersion = localStorage.getItem('portfolioVersion');
-            const currentVersion = '1.1'; // Updated to fix ISO audit image path
+            const currentVersion = '1.2'; // Updated to add Web Developer Training cert
             
             if (!hasData || dataVersion !== currentVersion) {
                 // Setup Skills
@@ -327,6 +327,15 @@
                         image: 'assets/images/certificates/iso-audit.jpeg',
                         date: '8 September 2025',
                         category: 'IT Security / Governance'
+                    },
+                    {
+                        name: 'Web Developer Training Certification',
+                        issuer: 'LTC Universitas Putera Batam',
+                        year: '2025',
+                        description: 'Menyelesaikan pelatihan pengembangan web yang meliputi pembuatan aplikasi web, struktur frontend, serta dasar pengembangan sistem berbasis web.',
+                        image: 'assets/images/certificates/web-dev-ltc.jpeg',
+                        date: '12 Juli 2025',
+                        category: 'Web Development'
                     }
                 ];
                 
