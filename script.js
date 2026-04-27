@@ -618,7 +618,7 @@ function downloadCV() {
     if (cv) {
         const cvData = JSON.parse(cv);
         const link = document.createElement('a');
-        link.href = cvData.data;
+        link.href = cvData.path;
         link.download = cvData.name;
         document.body.appendChild(link);
         link.click();

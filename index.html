@@ -227,7 +227,7 @@
             // Check if data already exists
             const hasData = localStorage.getItem('portfolioSetup');
             const dataVersion = localStorage.getItem('portfolioVersion');
-            const currentVersion = '2.1'; // Fixed RevoU image path
+            const currentVersion = '2.2'; // Added CV download
             
             if (!hasData || dataVersion !== currentVersion) {
                 // Setup Skills
@@ -376,6 +376,12 @@
                     }
                 ];
                 
+                // Setup CV
+                const cv = {
+                    name: 'CV_Anggit_Sutrisno.pdf',
+                    path: 'assets/cv/CV. Anggit Sutrisno.pdf'
+                };
+                
                 // Save to localStorage
                 localStorage.setItem('skills', JSON.stringify(skills));
                 localStorage.setItem('experiences', JSON.stringify(experiences));
@@ -383,6 +389,7 @@
                 localStorage.setItem('contactInfo', JSON.stringify(contactInfo));
                 localStorage.setItem('projects', JSON.stringify(projects));
                 localStorage.setItem('certificates', JSON.stringify(certificates));
+                localStorage.setItem('cv', JSON.stringify(cv));
                 localStorage.setItem('portfolioSetup', 'true');
                 localStorage.setItem('portfolioVersion', currentVersion);
                 
