@@ -226,8 +226,10 @@
         (function() {
             // Check if data already exists
             const hasData = localStorage.getItem('portfolioSetup');
+            const dataVersion = localStorage.getItem('portfolioVersion');
+            const currentVersion = '1.1'; // Updated to fix ISO audit image path
             
-            if (!hasData) {
+            if (!hasData || dataVersion !== currentVersion) {
                 // Setup Skills
                 const skills = [
                     { name: 'Python', level: 60, category: 'Programming', icon: '🐍' },
@@ -322,7 +324,7 @@
                         issuer: 'Mitra Berdaya Optima x PT Capella Dinamik Nusantara (AHM Group)',
                         year: '2025',
                         description: 'Menyelesaikan pelatihan audit internal untuk standar Information Security Management System (ISO 27001:2022) dan Privacy Information Management System (ISO 27701:2019), termasuk proses audit, evaluasi kontrol keamanan, dan manajemen risiko.',
-                        image: 'assets/images/certificates/iso-audit.jpg',
+                        image: 'assets/images/certificates/iso-audit.jpeg',
                         date: '8 September 2025',
                         category: 'IT Security / Governance'
                     }
@@ -336,6 +338,7 @@
                 localStorage.setItem('projects', JSON.stringify(projects));
                 localStorage.setItem('certificates', JSON.stringify(certificates));
                 localStorage.setItem('portfolioSetup', 'true');
+                localStorage.setItem('portfolioVersion', currentVersion);
                 
                 console.log('✅ Portfolio data initialized!');
             }
